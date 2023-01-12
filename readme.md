@@ -31,4 +31,3 @@ print("HELLO WORLD")
 
 ----
 
-수정
