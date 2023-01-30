@@ -1,3 +1,5 @@
+
+
 # 오늘배운내용
 
 ## 핵심내용
@@ -13,8 +15,6 @@
 
 * gui
 * CLI
-* cd 폴더명
-* touch 파일생성
 * 파이썬
 
 ```python
@@ -32,4 +32,12 @@ print("HELLO WORLD")
 ~~strikeout~~
 
 ----
+
+
+
+
+
+
+
+
 
