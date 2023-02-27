@@ -67,24 +67,74 @@
 # a=sorted(list(set(orders.split(','))),reverse=True)
 # print(a)
 #####################
-orders = '아이스아메리카노,카라멜마키야또,에스프레소,아메리카노,아메리카노,아이스라떼,핫초코,아이스아메리카노,아메리카노,아이스카라멜마키야또,아이스라떼,라떼마키야또,카푸치노,라떼마키야또'
-mod_orders=orders.split(',')
-cnt=0
-for i in range(len(mod_orders)):
-    ice = mod_orders[i].count('아이스')
-    if ice>0:
-        cnt+=1
-print(cnt)
+# orders = '아이스아메리카노,카라멜마키야또,에스프레소,아메리카노,아메리카노,아이스라떼,핫초코,아이스아메리카노,아메리카노,아이스카라멜마키야또,아이스라떼,라떼마키야또,카푸치노,라떼마키야또'
+# mod_orders=orders.split(',')
+# cnt=0
+# for i in range(len(mod_orders)):
+#     ice = mod_orders[i].count('아이스')
+#     if ice>0:
+#         cnt+=1
+# print(cnt)
 
-a=list(set(orders.split(',')))
-list_1=[]
+# a=list(set(orders.split(',')))
+# list_1=[]
 
-for j in a:
-    cnt=0
-    for k in range(len(mod_orders)):
-        if j == mod_orders[k]:
-            cnt+=1
-    list_1.append((j,cnt))
+# for j in a:
+#     cnt=0
+#     for k in range(len(mod_orders)):
+#         if j == mod_orders[k]:
+#             cnt+=1
+#     list_1.append((j,cnt))
     
-for k in range(len(list_1)):
-    print(*list_1[k])
+# for k in range(len(list_1)):
+#     print(*list_1[k])
+    ########################
+# print(dir(str))
+# fruit=str(input())
+# fruit_list=list(fruit.lower().split(','))
+# for i in range(len(fruit_list)):
+#     if str(fruit_list[i]).find('rotten') == -1:
+#         pass
+#     else:
+#         fruit_list[i]=str(fruit_list[i]).replace('rotten','')
+#         print(fruit_list[i])
+# print(fruit_list)
+#############################
+# alp=str(input())
+# if len(alp)%2 == 0:
+#     print(alp[len(alp)//2-1],alp[len(alp)//2])
+# else:
+#     print(alp[len(alp)//2])
+######################################
+class Ssafy: #클래스 정의
+    region = '부울경' # 클래스 변수
+    name = '_' # 클래스 변수
+    def __init__(self,name,region): # 매직 메서드
+        self.name = name # 인스턴스 변수
+        self.region = region # 인스턴스 변수
+
+    def talk(self): # 인스턴스 메서드
+        print(f'{self.region}의 {self.name}는 피곤해!!!')
+
+    @classmethod # 클래스메서드
+    def good(cls):
+        print(f'{cls.region}은 좋다.')
+    
+    @staticmethod # 스테틱메서드
+    def check_tired(tired):
+        return tired > 10
+
+person_1 = Ssafy('김싸피','울산') #인스턴스 생성
+print(Ssafy.name) # _
+print(Ssafy.region) # 부울경
+print(person_1.name) # 김싸피
+print(person_1.region) # 울산
+person_1.talk() # 메서드 호출
+# 김싸피 피곤해!!!
+person_1.good() # 인스턴스는 클래스 메서드,인스턴스 메서드 둘 다 접근가능
+# 부울경은 좋다.
+Ssafy.good()
+# 부울경은 좋다.
+#Ssafy.talk() # 오류발생 클래스는 인스턴스 메서드 사용 불가능
+print(Ssafy.check_tired(20)) # True
+print(person_1.check_tired(20)) # True
